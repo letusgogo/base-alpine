@@ -9,3 +9,6 @@ RUN apk add -U tzdata && \
 # 安装根证书
 RUN apk update && apk upgrade && apk add ca-certificates && update-ca-certificates && rm -rf /var/cache/apk/*
 
+# 安装网络调试工具
+RUN apk add --no-cache \
+    curl \
